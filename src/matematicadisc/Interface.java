@@ -20,6 +20,11 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
+        this.setTitle("Princípios - Exercícios");
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        JogosdeAzar.setToolTipText("Anagrama");
+        RodaDeCriancas.setToolTipText("Roda de crianças");
     }
 
     /**
@@ -34,7 +39,8 @@ public class Interface extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         JogosdeAzar = new javax.swing.JButton();
         RodaDeCriancas = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        VogaisEConsoantes = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,53 +58,52 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Exercício 3");
+        VogaisEConsoantes.setText("Exercício 3");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("PRINCÍPIOS - ANÁLISE COMBINATÓRIA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 63, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(60, 60, 60))
             .addGroup(layout.createSequentialGroup()
-                .addGap(113, 113, 113)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(RodaDeCriancas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JogosdeAzar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addGap(142, 142, 142)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(VogaisEConsoantes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(JogosdeAzar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RodaDeCriancas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(JogosdeAzar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
                 .addComponent(RodaDeCriancas, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addGap(18, 18, 18)
+                .addComponent(VogaisEConsoantes, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void JogosdeAzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JogosdeAzarActionPerformed
-        Principios principio = new Principios();
-        
-        int vetor[] = new int[]{60,59,58,57,56,55};
-        
-        BigInteger mult = principio.PrincipioMultiplicativo(6, vetor);
-        BigInteger result = mult.divide(principio.fatorial(6));
-        String resolucao = new String("");
-        
-        for(int i=0;i<6;i++){
-            resolucao+=(i==5? Integer.toString(vetor[i]): Integer.toString(vetor[i]) + " * ");
-        }
-        
-        JOptionPane.showMessageDialog(null, "Descrição: \n\nAs chances de ganhar são de 1 em " + result + "\n\nResolução: \n(" + resolucao + ") / " + principio.fatorial(6), "Exercício 1 - Mega-Sena", JOptionPane.INFORMATION_MESSAGE);
+        this.setEnabled(false);
+        new Exercício1().setVisible(true);
     }//GEN-LAST:event_JogosdeAzarActionPerformed
 
     private void RodaDeCriancasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RodaDeCriancasActionPerformed
-        this.setVisible(false);
+        this.setEnabled(false);
         new Exercício2().setVisible(true);
     }//GEN-LAST:event_RodaDeCriancasActionPerformed
 
@@ -140,7 +145,8 @@ public class Interface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JogosdeAzar;
     private javax.swing.JButton RodaDeCriancas;
+    private javax.swing.JButton VogaisEConsoantes;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
