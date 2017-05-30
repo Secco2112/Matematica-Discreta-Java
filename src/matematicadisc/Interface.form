@@ -35,9 +35,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="VogaisEConsoantes" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                  <Component id="MegaSena" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="JogosdeAzar" max="32767" attributes="0"/>
+                      <Component id="Anagramas" max="32767" attributes="0"/>
                       <Component id="RodaDeCriancas" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -51,23 +51,23 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="33" max="32767" attributes="0"/>
-              <Component id="JogosdeAzar" min="-2" pref="56" max="-2" attributes="0"/>
+              <Component id="Anagramas" min="-2" pref="56" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="RodaDeCriancas" min="-2" pref="54" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="VogaisEConsoantes" min="-2" pref="47" max="-2" attributes="0"/>
+              <Component id="MegaSena" min="-2" pref="47" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="JogosdeAzar">
+    <Component class="javax.swing.JButton" name="Anagramas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Exerc&#xed;cio 1"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JogosdeAzarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnagramasActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="RodaDeCriancas">
@@ -78,10 +78,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RodaDeCriancasActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="VogaisEConsoantes">
+    <Component class="javax.swing.JButton" name="MegaSena">
       <Properties>
         <Property name="text" type="java.lang.String" value="Exerc&#xed;cio 3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MegaSenaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

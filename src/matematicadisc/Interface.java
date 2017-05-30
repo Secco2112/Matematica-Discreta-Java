@@ -23,7 +23,7 @@ public class Interface extends javax.swing.JFrame {
         this.setTitle("Princípios - Exercícios");
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        JogosdeAzar.setToolTipText("Anagrama");
+        Anagramas.setToolTipText("Anagrama");
         RodaDeCriancas.setToolTipText("Roda de crianças");
     }
 
@@ -37,17 +37,17 @@ public class Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        JogosdeAzar = new javax.swing.JButton();
+        Anagramas = new javax.swing.JButton();
         RodaDeCriancas = new javax.swing.JButton();
-        VogaisEConsoantes = new javax.swing.JButton();
+        MegaSena = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        JogosdeAzar.setText("Exercício 1");
-        JogosdeAzar.addActionListener(new java.awt.event.ActionListener() {
+        Anagramas.setText("Exercício 1");
+        Anagramas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JogosdeAzarActionPerformed(evt);
+                AnagramasActionPerformed(evt);
             }
         });
 
@@ -58,7 +58,12 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        VogaisEConsoantes.setText("Exercício 3");
+        MegaSena.setText("Exercício 3");
+        MegaSena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MegaSenaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("PRINCÍPIOS - ANÁLISE COMBINATÓRIA");
@@ -74,9 +79,9 @@ public class Interface extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(142, 142, 142)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(VogaisEConsoantes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MegaSena, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(JogosdeAzar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Anagramas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(RodaDeCriancas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -86,26 +91,28 @@ public class Interface extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(JogosdeAzar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Anagramas, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(RodaDeCriancas, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(VogaisEConsoantes, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MegaSena, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JogosdeAzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JogosdeAzarActionPerformed
-        this.setEnabled(false);
+    private void AnagramasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnagramasActionPerformed
         new Exercício1().setVisible(true);
-    }//GEN-LAST:event_JogosdeAzarActionPerformed
+    }//GEN-LAST:event_AnagramasActionPerformed
 
     private void RodaDeCriancasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RodaDeCriancasActionPerformed
-        this.setEnabled(false);
         new Exercício2().setVisible(true);
     }//GEN-LAST:event_RodaDeCriancasActionPerformed
+
+    private void MegaSenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MegaSenaActionPerformed
+        new Exercício3().setVisible(true);
+    }//GEN-LAST:event_MegaSenaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,9 +150,9 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JogosdeAzar;
+    private javax.swing.JButton Anagramas;
+    private javax.swing.JButton MegaSena;
     private javax.swing.JButton RodaDeCriancas;
-    private javax.swing.JButton VogaisEConsoantes;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
