@@ -186,6 +186,8 @@ public class Exercício1 extends javax.swing.JFrame {
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Principios p = new Principios();
+        
         String palavra = this.jTextField1.getText();
         if(palavra.length()>0){
             this.jPanel1.setEnabled(true);
@@ -234,6 +236,7 @@ public class Exercício1 extends javax.swing.JFrame {
             
             String text = Integer.toString(palavra.length()) + "!";
             int multFatoriais = 1;
+            BigInteger mult = new BigInteger("1");
             
             if(j>0){
                 for(int i=0;i<j;i++){
@@ -243,11 +246,12 @@ public class Exercício1 extends javax.swing.JFrame {
                     else text += Integer.toString(repetidos[i]) + "! * ";
                     
                     multFatoriais*=fatorial(repetidos[i]);
+                    mult = mult.multiply(BigInteger.valueOf(fatorial(repetidos[i])));
                 }
             }
             
             jLabel3.setText(text);
-            jLabel6.setText(Integer.toString(fatorial(palavra.length())/multFatoriais));
+            jLabel6.setText(p.fatorial(palavra.length()).divide(mult).toString());
             
         } else {
             JOptionPane.showMessageDialog(null, "Digite uma palavra.", "Erro", JOptionPane.ERROR_MESSAGE);
